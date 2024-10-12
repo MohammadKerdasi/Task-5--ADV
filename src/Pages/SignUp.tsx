@@ -71,11 +71,11 @@ const SignUp: React.FC = () => {
 
   return (
     <div className="w-full h-screen flex items-center justify-center bg-gradient-to-r from-orange to-light-orange">
-      <div className="w-[276px] md:w-[476px] lg:py-[42px] lg:px-[30.6px] p-8 rounded-[20px] bg-white">
+      <div className="w-[276px] md:w-[476px] lg:py-[42px] lg:px-[30.6px] px-7 py-4 rounded-[20px] bg-white">
         <form className="flex flex-col" onSubmit={send}>
           <div className="text-3xl text-center">
-            <img className="mx-auto lg:mb-[43px] mb-4" src={logo} alt="Logo" />
-            <h2 className="font-semibold text-[22px]">SIGN UP</h2>
+            <img className="mx-auto lg:mb-[43px] mb-4 lg:w-[150px] w-[100px]" src={logo} alt="Logo" />
+            <h2 className="font-semibold lg:text-[22px] text-[18px]">SIGN UP</h2>
             <p className="text-sm text-light-gray-2">
               Fill in the following fields to create an account
             </p>
@@ -87,14 +87,14 @@ const SignUp: React.FC = () => {
               onChange={(event) => setFirstName(event.target.value)}
               placeholder="First Name"
               required
-              className="p-2 border w-[200px] rounded-[4px] placeholder-gray-300 text-sm mb-[20px]"
+              className="p-2 border w-[200px] rounded-[4px] placeholder-gray-300 text-sm lg:mb-[20px] mb-[10px]"
             />
             <input
               type="text"
               onChange={(event) => setLastName(event.target.value)}
               placeholder="Last Name"
               required
-              className="p-2 border w-[200px] rounded-[4px] placeholder-gray-300 text-sm mb-[20px]"
+              className="p-2 border w-[200px] rounded-[4px] placeholder-gray-300 text-sm lg:mb-[20px] mb-[10px]"
             />
           </div>
           <label className="text-light-gray-2 text-sm mb-[10px]">Email</label>
@@ -103,7 +103,7 @@ const SignUp: React.FC = () => {
             onChange={(event) => setEmail(event.target.value)}
             placeholder="Enter your email"
             required
-            className="p-2 border w-full rounded-[4px] placeholder-gray-300 text-sm mb-[30px]"
+            className="p-2 border w-full rounded-[4px] placeholder-gray-300 text-sm lg:mb-[30px] mb-[10px]"
           />
           <label className="text-light-gray-2 text-sm mb-[10px]">Password</label>
           {errorMessage && (
